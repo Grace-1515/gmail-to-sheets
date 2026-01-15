@@ -2,22 +2,23 @@
 # GMAIL API CONFIGURATION
 # ---------------------------
 
-# Gmail API scopes
-GMAIL_SCOPES = [
-    "https://www.googleapis.com/auth/gmail.modify"
-]
 
-# ---------------------------
-# GOOGLE SHEETS CONFIGURATION
-# ---------------------------
 
-# Google Sheets API scope
-SHEETS_SCOPES = [
+SCOPES = [
+    "https://www.googleapis.com/auth/gmail.modify",
     "https://www.googleapis.com/auth/spreadsheets"
 ]
 
+SPREADSHEET_ID = "1iGKmbB9kM19Tcehe_vJhUrq7I_in5XJi5-buP7dmYlY"
+SHEET_NAME = "Sheet1"
+
+CREDENTIALS_FILE = "credentials/credentials.json"
+TOKEN_FILE = "token.json"
+STATE_FILE = "state.json"
+
+
 # Google Sheet details
-SPREADSHEET_ID = "PUT_YOUR_SPREADSHEET_ID_HERE"
+SPREADSHEET_ID = "1iGKmbB9kM19Tcehe_vJhUrq7I_in5XJi5-buP7dmYlY"
 SHEET_NAME = "Sheet1"
 
 # ---------------------------

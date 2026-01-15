@@ -1,10 +1,16 @@
+import sys
+import os
+
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import os
 import pickle
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-from config import GMAIL_SCOPES, CREDENTIALS_FILE, TOKEN_FILE
+from config import SCOPES, CREDENTIALS_FILE, TOKEN_FILE
+
 
 
 def get_gmail_service():
@@ -25,7 +31,7 @@ def get_gmail_service():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                CREDENTIALS_FILE, GMAIL_SCOPES
+                CREDENTIALS_FILE, SCOPES
             )
             creds = flow.run_local_server(port=0)
 
